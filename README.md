@@ -7,6 +7,16 @@ It uses Webpack for building, and will process all your ES6 JS and SCSS files, t
 
 After cloning, run `npm install`.
 
+Things about this/Webpack that are a bit weird
+--
+
+- It technically only has one requirement - that `src/main.js` exists, which is where the code execution starts.
+- You require everything.
+ - Want to include some SCSS? `require('myfile.scss')`.
+ - Want to use an image? `require('animage.jpg')` will return a filename (Webpack does all kinds of crazy hash-y things so it won't be `animage.jpg`) which you can then place inside an `<img>` tag or whatever.
+- It has a template file in `src/index.template.html`, which is processed by [HtmlWebpackPlugin](https://github.com/ampedandwired/html-webpack-plugin/blob/master/default_index.html). If only outputs one file, index.html - but you can change that by tweaking the Webpack options.
+- Speaking of which, the Webpack options are in `webpack.config.js`.
+
 Tasks
 --
 
