@@ -1,4 +1,4 @@
-var base = require('./webpack.config')
+var base = require('./webpack.dist.config')
 var S3Plugin = require('webpack-s3-plugin')
 var s3Opts = require('./aws.json')
 

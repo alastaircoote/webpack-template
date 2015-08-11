@@ -25,7 +25,7 @@
   },
   "scripts": {
     "watch": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.debug.config.js",
-    "dist": "node_modules/webpack/bin/webpack.js -p",
+    "dist": "node_modules/webpack/bin/webpack.js --config webpack.dist.config.js -p",
     "publish": "node_modules/webpack/bin/webpack.js --config webpack.publish.config.js -p"
   },
   "author": "",
