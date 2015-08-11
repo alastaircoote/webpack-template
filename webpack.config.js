@@ -12,11 +12,12 @@ module.exports = {
             { test: /\.scss$/, loader: 'style!css!sass' },
             { test: /\.css$/, loader: 'style!css' },
             { test: /\.json$/, loader: 'json' },
-            { test: /\.svg$/, loader: 'raw' },
-            { test: /\.png$/, loader: 'file' }
+            { test: /\.(svg|jpeg|jpg|png)$/, loader: 'file' }
         ]
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({
+        template: './index.template.html'
+    })],
     devServer: {
         contentBase: './tmp',
         port: '3100'
