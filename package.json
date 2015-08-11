@@ -3,27 +3,30 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
     "babel": "^5.5.3",
     "babel-loader": "^5.0.0",
     "css-loader": "^0.12.1",
+    "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.1",
-    "html-webpack-plugin": "^1.3.0",
+    "html-webpack-plugin": "^1.6.1",
     "json-loader": "^0.5.1",
     "lodash.merge": "^3.3.2",
     "raw-loader": "^0.5.1",
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.8",
-    "raw-loader": "^0.5.1",
     "sass-loader": "^0.4.2",
     "style-loader": "^0.12.2",
     "webpack": "^1.9.5",
-    "webpack-dev-server": "^1.8.2"
+    "webpack-dev-server": "^1.8.2",
+    "webpack-s3-plugin": "git://github.com/alastaircoote/s3-plugin-webpack.git"
   },
-  "devDependencies": {},
   "scripts": {
-    "watch": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.hot.config.js"
+    "watch": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.debug.config.js",
+    "dist": "node_modules/webpack/bin/webpack.js -p",
+    "publish": "node_modules/webpack/bin/webpack.js --config webpack.publish.config.js -p"
   },
   "author": "",
   "license": "ISC"

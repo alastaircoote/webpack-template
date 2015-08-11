@@ -1,3 +1,3 @@
 require('./main.scss')
 
-console.log("hello2")
+console.log("hello")

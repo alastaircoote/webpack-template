@@ -1,0 +1,7 @@
+{
+    "accessKeyId": "KEY",
+    "secretAccessKey": "SECRET",
+    "region": "us-east-1",
+    "bucket": "bucket-name",
+    "basePath": "directory"
+}
