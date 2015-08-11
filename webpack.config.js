@@ -14,7 +14,7 @@ module.exports = {
             { test: /\.css$/, loader: 'style!css!autoprefixer-loader' },
             { test: /\.json$/, loader: 'json' },
             { test: /\.svg$/, loader: 'raw' },
-            { test: /\.(png|otf)$/, loader: 'file' }
+            { test: /\.(svg|jpeg|jpg|png)$/, loader: 'file' }
         ]
     },
     resolveLoader: {
