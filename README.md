@@ -3,7 +3,7 @@ Webpack Template
 
 I use this for new projects. You can too, if you like inflexible, highly opinionated build systems!
 
-It uses Webpack for building, and will process all your ES6 JS and SCSS files, then publish them to S3 if you'd like. I haven't yet had the need for anything else - when I do, I'll put it in.
+It uses Webpack for building, and will process all your ES6 JS and SCSS files, then publish them to S3 if you'd like. I haven't yet had the need for anything else - when I do, I'll put it in. Obvious disclaimer: I am, to my knowledge, the only person who uses this. Use it at your peril, I often have no idea what I am doing.
 
 After cloning, run `npm install`.
 
