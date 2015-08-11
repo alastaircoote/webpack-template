@@ -23,12 +23,13 @@ module.exports = {
           ]
     },
     plugins: [new HtmlWebpackPlugin({
-        template: 'src/template.html'
+        template: 'index.template.html'
     })],
     devServer: {
         contentBase: './tmp',
         port: '3100',
-        host:'0.0.0.0'
+        host:'0.0.0.0',
+        hot:true
     },
     devtool: '#inline-source-map',
     debug: true
