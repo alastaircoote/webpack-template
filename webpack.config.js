@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path')
 
 module.exports = {
     entry: './src/main.js',
@@ -9,17 +10,25 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-            { test: /\.scss$/, loader: 'style!css!sass' },
-            { test: /\.css$/, loader: 'style!css' },
+            { test: /\.scss$/, loader: 'style!css!autoprefixer-loader!sass' },
+            { test: /\.css$/, loader: 'style!css!autoprefixer-loader' },
             { test: /\.json$/, loader: 'json' },
             { test: /\.svg$/, loader: 'raw' },
-            { test: /\.png$/, loader: 'file' }
+            { test: /\.(png|otf)$/, loader: 'file' }
         ]
     },
-    plugins: [new HtmlWebpackPlugin()],
+    resolveLoader: {
+      modulesDirectories: [
+              path.join(__dirname,'/node_modules')
+          ]
+    },
+    plugins: [new HtmlWebpackPlugin({
+        template: 'src/template.html'
+    })],
     devServer: {
         contentBase: './tmp',
-        port: '3100'
+        port: '3100',
+        host:'0.0.0.0'
     },
     devtool: '#inline-source-map',
     debug: true
