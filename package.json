@@ -19,8 +19,6 @@
     "react-hot-loader": "^1.2.8",
     "sass-loader": "^0.4.2",
     "style-loader": "^0.12.2",
-    "webpack": "^1.9.5",
-    "webpack-dev-server": "^1.8.2",
     "webpack-s3-plugin": "git://github.com/alastaircoote/s3-plugin-webpack.git"
   },
   "scripts": {
